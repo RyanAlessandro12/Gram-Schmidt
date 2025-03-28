@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// ---------- IMPRIME UN VECTOR : CON 2 DECIMALES DE PRESICION --------------
 void imprimirVector(const vector<double>& v) {
     for (double val : v) {
         cout << fixed << setprecision(2) << val << " ";
@@ -14,7 +13,6 @@ void imprimirVector(const vector<double>& v) {
     cout << endl;
 }
 
-// ------------ CALCULA EL PRODUCTO PUNTO -----------------
 double productoPunto(const vector<double>& v1, const vector<double>& v2) {
     double result = 0.0;
     for (size_t i = 0; i < v1.size(); ++i) {
@@ -23,7 +21,6 @@ double productoPunto(const vector<double>& v1, const vector<double>& v2) {
     return result;
 }
 
-// -------------- RESTA DOS VECTORES -------------
 vector<double> restarVectores(const vector<double>& v1, const vector<double>& v2) {
     vector<double> result(v1.size());
     for (size_t i = 0; i < v1.size(); ++i) {
@@ -32,7 +29,6 @@ vector<double> restarVectores(const vector<double>& v1, const vector<double>& v2
     return result;
 }
 
-// -------------- MULTIPLA UN VECTOR POR UN ESCALAR -------------------
 vector<double> multiplicarPorEscalar(const vector<double>& v, double escalar) {
     vector<double> result(v.size());
     for (size_t i = 0; i < v.size(); ++i) {
@@ -41,12 +37,10 @@ vector<double> multiplicarPorEscalar(const vector<double>& v, double escalar) {
     return result;
 }
 
-// ------------ CALCULA LA NORMA DE UN VECTOR ----------------
 double normaVector(const vector<double>& v) {
     return sqrt(productoPunto(v, v));
 }
 
-// ------------ NORMALIZA UN VECTOR DIVIDIENDOLO POR SU NORMA ----------------
 vector<double> normalizarVector(const vector<double>& v) {
     double norma = normaVector(v);
     if (norma == 0) {
